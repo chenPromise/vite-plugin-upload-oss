@@ -58,19 +58,18 @@ export default function vitePluginUpLoadOss(options:optionsValue) {
     let dirPath = ''
     let dirName = ''
     return {
-
         name:'vite-plugin-upload-oss',
         // pre 会较于 post 先执行
         enforce: 'post', // post
     
         // 指明它们仅在 'build' 或 'serve' 模式时调用
         apply: 'build', // apply 亦可以是一个函数
-        configResolved:(config) => {
+        configResolved:(config):void => {
             console.log(config,'config');
             dirPath = config.root
             dirName = config.build.outDir
         },
-        closeBundle:async () => {
+        closeBundle:():void => {
             let upLoadDir = getDirList(dirPath, dirName)
              console.log(upLoadDir)
             for (let idx = 0; idx < upLoadDir.length; idx++) {

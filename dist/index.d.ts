@@ -9,7 +9,7 @@ declare function vitePluginUpLoadOss(options: optionsValue): {
     enforce: string;
     apply: string;
     configResolved: (config: any) => void;
-    closeBundle: () => Promise<void>;
+    closeBundle: () => void;
 };
 
 export { vitePluginUpLoadOss as default };

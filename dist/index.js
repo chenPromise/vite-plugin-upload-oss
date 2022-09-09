@@ -61314,7 +61314,7 @@ function vitePluginUpLoadOss(options) {
       dirPath = config.root;
       dirName = config.build.outDir;
     },
-    closeBundle: async () => {
+    closeBundle: () => {
       let upLoadDir = getDirList(dirPath, dirName);
       console.log(upLoadDir);
       for (let idx = 0; idx < upLoadDir.length; idx++) {
