@@ -1,0 +1,24 @@
+{
+  "name": "vite-plugin-upload-oss",
+  "version": "1.0.1",
+  "description": "vite 上传 oss",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "dev": "npm run build && cd examples/vue3-vite3 && npm i && npm run build"
+  },
+  "keywords": [
+    "vite",
+    "oss",
+    "build"
+  ],
+  "author": "码字成山",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "ali-oss": "^6.17.1",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.2",
+    "vite": "^3.0.4"
+  }
+}
